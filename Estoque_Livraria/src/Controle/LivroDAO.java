@@ -19,7 +19,7 @@ public class LivroDAO {
 	public Boolean Alterar(Livro p) {
 		for (Livro produto : Estoque) {
 			if (produto.getTitulo() == p.getTitulo()) {
-				
+
 				return true;
 			}
 		}
@@ -37,14 +37,13 @@ public class LivroDAO {
 	}
 
 	public void listar() {
-		for(int i=0;i<Estoque.size();i++)
-		{
+		for (int i = 0; i < Estoque.size(); i++) {
 			System.out.println();
-			System.out.println("Livro"+(i+1));
+			System.out.println("Livro" + (i + 1));
 			System.out.println("Titulo: " + Estoque.get(i).getTitulo());
-			System.out.println("Autor:"+ Estoque.get(i).getAutor());
-			System.out.println("Genero:"+Estoque.get(i).getGenero());
-			System.out.println("Preco:"+Estoque.get(i).getPreco());
+			System.out.println("Autor:" + Estoque.get(i).getAutor());
+			System.out.println("Genero:" + Estoque.get(i).getGenero());
+			System.out.println("Preco:" + Estoque.get(i).getPreco());
 		}
 	}
 

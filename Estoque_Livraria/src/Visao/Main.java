@@ -11,8 +11,7 @@ public class Main {
 
 		Integer opcaoSelecionada = Integer.MAX_VALUE;
 		Scanner leitura = new Scanner(System.in);
-		     
-		       
+
 		LivroDAO estoque = new LivroDAO();
 
 		while (opcaoSelecionada != 0) {
@@ -23,7 +22,7 @@ public class Main {
 			System.out.println("2 BUSCAR LIVRO");
 			System.out.println("3 EFETUAR COMPRAR");
 			System.out.println("4 Listar");
-	
+
 			opcaoSelecionada = Integer.valueOf(leitura.nextLine());
 
 			switch (opcaoSelecionada) {
@@ -32,7 +31,7 @@ public class Main {
 				break;
 			}
 			case 1: {
-				Livro a=new Livro();
+				Livro a = new Livro();
 				System.out.println("Informe o título: ");
 				a.setTitulo(leitura.nextLine());
 				System.out.println("Informe o autor: ");
@@ -40,29 +39,26 @@ public class Main {
 				System.out.println("Informe o gênero literário: ");
 				a.setGenero(leitura.nextLine());
 				System.out.println("Informe o preço: ");
-				a.setPreco(Double.valueOf(leitura.nextLine()));	
-				
+				a.setPreco(Double.valueOf(leitura.nextLine()));
+
 				estoque.Inserir(a);
-				
-				
+				break;
+
 			}
 			case 2: {
-			
-				
-			
-				
+				break; 
 			}
 			case 3: {
 				/*
-				 * Realiza a função de compra atraves do arraylist
-				 * Caso a compra seja efetuada retira o livro do estoque
+				 * Realiza a função de compra atraves do arraylist Caso a compra seja efetuada
+				 * retira o livro do estoque
 				 * 
 				 */
-				
-			
-			}
-			case 4:{
+				break;
+			}     
+			case 4: {
 				estoque.listar();
+				break;
 			}
 
 			}
