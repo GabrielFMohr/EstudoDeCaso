@@ -6,6 +6,7 @@ import java.util.Scanner;
 import Modelo.Livro;
 
 public class LivroDAO {
+	
 	private ArrayList<Livro> Estoque;
 	Scanner leitura = new Scanner(System.in);
 
@@ -13,15 +14,15 @@ public class LivroDAO {
 		Estoque = new ArrayList<Livro>();
 	}
 
-	public Boolean Inserir(Livro a) {
+	public Boolean Inserir(Livro a) {//Adicionar um livro
 		Estoque.add(a);
 		return true;
 	}
 
 	public Boolean Buscar(String t) {
-		for (int i = 0; i < Estoque.size(); i++) {
+		for (int i = 0; i < Estoque.size(); i++) {//Percorre o estoque
 			String r = Estoque.get(i).getTitulo();
-			if (r.equals(t)) {
+			if (r.equals(t)) {//Acha o livro no estouqe e mostra suas inforações
 				System.out.println("Titulo: " + Estoque.get(i).getTitulo());
 				System.out.println("Autor:" + Estoque.get(i).getAutor());
 				System.out.println("Genero:" + Estoque.get(i).getGenero());
@@ -32,12 +33,12 @@ public class LivroDAO {
 	}
 
 	public Boolean Compra(String p) {
-		for (int i = 0; i < Estoque.size(); i++) {
+		for (int i = 0; i < Estoque.size(); i++) {//Percorre o estoque
 			String r = Estoque.get(i).getTitulo();
-			if (r.equals(p)) {
+			if (r.equals(p)) {//Acha o livro no estoque
 				System.out.println("O preço do livro desejado é R$ " + Estoque.get(i).getPreco()
 						+ "\nDeseja efetuar a compra?(1 para sim / 2 para não)");
-				int E = leitura.nextInt();
+				int E = leitura.nextInt();//Confirma a compra
 				if (E == 1) {
 					System.out.println("Compra efetuada com sucesso");
 					Estoque.remove(i);
@@ -50,7 +51,7 @@ public class LivroDAO {
 		return false;
 	}
 
-	public void listar() {
+	public void listar() {//Mostra todos os livros do estoque
 		for (int i = 0; i < Estoque.size(); i++) {
 			System.out.println();
 			System.out.println("Livro " + (i + 1));

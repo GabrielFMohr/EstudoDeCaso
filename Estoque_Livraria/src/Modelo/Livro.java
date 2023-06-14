@@ -1,7 +1,9 @@
 package Modelo;
 
 public class Livro {
-
+	
+//Definição dos atributos e métodos da classe livro
+	
 	private String titulo;
 	private String autor;
 	private String genero;

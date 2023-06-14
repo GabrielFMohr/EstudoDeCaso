@@ -1,6 +1,6 @@
 package Modelo;
 
-public interface ILivro {
+public interface ILivro {//Implementação do modelo de interface
 
 	public boolean Inserir(Livro a);
 
