@@ -55,7 +55,7 @@ public class Main {
 
 			}
 			case 2: {// Buscar livro
-				System.out.println("\nInsira o título do livro desejado: ");
+				System.out.println("\nInsira o Isbn do livro desejado: ");
 				estoque.Buscar(Long.valueOf(leitura.nextLine()));
 
 				break;
