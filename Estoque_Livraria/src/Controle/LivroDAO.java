@@ -35,10 +35,11 @@ public class LivroDAO {
 		for(int i=0; i<Estoque.size(); i++){
 			String r=Estoque.get(i).getTitulo();
             if(r.equals(p)){
-    			System.out.println("O preço do livro desejado é "+Estoque.get(i).getPreco()+". \n Deseja efetuar a compra?(1 para sim / 2 para não");
+    			System.out.println("O preço do livro desejado é R$ "+Estoque.get(i).getPreco()+"\nDeseja efetuar a compra?(1 para sim / 2 para não)");
     			int E=leitura.nextInt();
     			if(E==1)
     			{
+    				System.out.println("Compra efetuada com sucesso");
     				Estoque.remove(i);
     				return true;
     			}
@@ -54,11 +55,12 @@ public class LivroDAO {
 	public void listar() {
 		for (int i = 0; i < Estoque.size(); i++) {
 			System.out.println();
-			System.out.println("Livro" + (i + 1));
+			System.out.println("Livro " + (i + 1));
 			System.out.println("Titulo: " + Estoque.get(i).getTitulo());
 			System.out.println("Autor:" + Estoque.get(i).getAutor());
 			System.out.println("Genero:" + Estoque.get(i).getGenero());
 			System.out.println("Preco:" + Estoque.get(i).getPreco());
+			System.out.println();
 		}
 	}
 
