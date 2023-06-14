@@ -27,6 +27,7 @@ public class LivroDAO {
 				System.out.println("Autor:" + Estoque.get(i).getAutor());
 				System.out.println("Genero:" + Estoque.get(i).getGenero());
 				System.out.println("Preco:" + Estoque.get(i).getPreco());
+				return true;
 			}
 		}
 		return false;

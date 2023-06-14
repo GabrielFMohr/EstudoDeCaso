@@ -27,7 +27,7 @@ public class Main {
 			switch (opcaoSelecionada) {
 			
 			case 0: {//Encerrar o programa
-				System.out.println("Encerrado");
+				System.out.println("\nEncerrado");
 				break;
 			}
 			case 1: {//cadastrar livro
@@ -47,12 +47,16 @@ public class Main {
 
 			}
 			case 2: {//Buscar livro
-				System.out.println("Insira o título do livro desejado: ");
-				estoque.Buscar(leitura.nextLine());
+				System.out.println("\nInsira o título do livro desejado: ");
+				boolean achou= estoque.Buscar(leitura.nextLine());
+				if(achou==false)
+				{
+					System.out.println("\nLivro não encontrado\n");
+				}
 				break;
 			}
 			case 3: {//Efetuar compra
-				System.out.println("Insira o título do livro desejado: ");
+				System.out.println("\nInsira o título do livro desejado: ");
 				estoque.Compra(leitura.nextLine());
 				break;
 			}
