@@ -1,7 +1,5 @@
 package Modelo;
 
-import java.util.ArrayList;
-
 public interface ILivro {
 
 	public boolean Inserir (Livro a);

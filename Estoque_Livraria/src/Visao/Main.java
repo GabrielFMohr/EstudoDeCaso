@@ -46,14 +46,13 @@ public class Main {
 
 			}
 			case 2: {
+				System.out.println("Insira o título do livro desejado: ");
+				estoque.Buscar(leitura.nextLine());
 				break; 
 			}
 			case 3: {
-				/*
-				 * Realiza a função de compra atraves do arraylist Caso a compra seja efetuada
-				 * retira o livro do estoque
-				 * 
-				 */
+				System.out.println("Insira o título do livro desejado: ");
+				estoque.Compra(leitura.nextLine());
 				break;
 			}     
 			case 4: {
