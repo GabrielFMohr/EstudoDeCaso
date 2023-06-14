@@ -57,9 +57,9 @@ public class LivroDAO {
 		return false;
 	}
 
-	public Boolean Compra(String p) {
+	public Boolean Compra(Long p) {
 		for (int i = 0; i < Estoque.size(); i++) {// Percorre o estoque
-			if (p.equals(Estoque.get(i).getTitulo())) {// Acha o livro no estoque
+			if (p.equals(Estoque.get(i).getIsbn())) {// Acha o livro no estoque
 				Estoque.remove(i);
 				return true;
 			}

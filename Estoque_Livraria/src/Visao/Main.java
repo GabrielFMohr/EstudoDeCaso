@@ -61,8 +61,8 @@ public class Main {
 				break;
 			}
 			case 3: {// Efetuar compra
-				System.out.println("\nInsira o título do livro desejado: ");
-				boolean achou = estoque.Compra(leitura.nextLine());
+				System.out.println("\nInsira o Isbn do livro desejado: ");
+				boolean achou = estoque.Compra(Long.valueOf(leitura.nextLine()));
 				if (achou == true) {
 					System.out.println("Compra efetuada!\n");
 				} else if (achou == false) {
