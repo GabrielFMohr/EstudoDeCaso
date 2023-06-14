@@ -4,10 +4,12 @@ public interface ILivro {//Implementação do modelo de interface
 
 	public boolean Inserir(Livro a);
 
-	public boolean Alterar(Livro p);
+	public Livro Buscar(Long t);
 
-	public boolean Excluir(Livro p);
+	public boolean Compra(Long p);
 
+	public boolean Alterar(Livro livroComAlteracoes);
+	
 	public void listar();
 
 }
