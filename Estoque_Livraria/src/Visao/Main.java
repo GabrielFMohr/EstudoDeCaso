@@ -48,13 +48,13 @@ public class Main {
 			case 2: {
 				System.out.println("Insira o título do livro desejado: ");
 				estoque.Buscar(leitura.nextLine());
-				break; 
+				break;
 			}
 			case 3: {
 				System.out.println("Insira o título do livro desejado: ");
 				estoque.Compra(leitura.nextLine());
 				break;
-			}     
+			}
 			case 4: {
 				estoque.listar();
 				break;
